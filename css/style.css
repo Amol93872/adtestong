@@ -946,3 +946,7 @@ a:focus {
           transform: rotate(-45deg) translate(8px, -8px);
 }
 /*# sourceMappingURL=style.css.map */
+img {
+  max-width: 100%;
+  height: auto;
+}
