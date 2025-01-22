@@ -41,6 +41,35 @@
         border-radius: 15px;
       }
 
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .footer-left h3 {
+        margin: 0;
+      }
+
+      .footer-right a {
+        margin-left: 15px;
+        text-decoration: none;
+      }
+
+      .social-icon {
+        width: 30px;
+        height: 30px;
+        filter: brightness(0) invert(1);
+        transition: transform 0.3s;
+      }
+
+      .social-icon:hover {
+        transform: scale(1.1);
+      }
+
       /* Responsive adjustments */
       @media (max-width: 768px) {
         .hero-section {
@@ -63,9 +92,11 @@
       }
     </style>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
+        <img src="images/logo.png" alt="" height="40" width="40" />
         <a class="navbar-brand" href="index.html">Advance Infotech</a>
         <button
           class="navbar-toggler"
@@ -81,10 +112,10 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="courses.html">Courses</a>
+              <a class="nav-link" href="courses.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="contactus.html">Contact Us</a>
@@ -152,9 +183,8 @@
                     >
                     <input
                       type="file"
-                      class="form-control"
                       id="resume"
-                      accept=".pdf"
+                      accept=".pdf,.doc,.docx"
                       required
                     />
                   </div>
@@ -204,6 +234,38 @@
     </section>
 
     <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <h3>Advance Infotech</h3>
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://www.instagram.com/aceadvancecomputer/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="images/instagram.png" alt="Instagram" class="social-icon" />
+        </a>
+        <a
+          href="https://www.facebook.com/advancecomputer2017/?notif_id=1736491087746978&notif_t=page_user_activity&ref=notif"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="images/fb.png" alt="Facebook" class="social-icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+            class="social-icon"
+          />
+        </a>
+      </div>
+    </footer>
     <footer class="bg-dark text-white py-4">
       <div class="container text-center">
         <p class="mb-0">© 2025 Advance Infotech. All rights reserved.</p>
@@ -230,7 +292,7 @@
           try {
             // Send to Google Sheets
             const response = await fetch(
-              "https://script.google.com/macros/s/AKfycbzAYBPrNm0sedPNP_fZy8v_f5zGNv_2NgXgFe3NOgNXWYbMq9QX6h7KrhtoDROwNRb2kw/exec",
+              "https://script.google.com/macros/s/AKfycbyuutENN6tYfpAfD0H04yXCQKD2yXUwNloPaYBiBZpyc05ittD8CreEGjiHxPZvKRAjcg/exec",
               {
                 method: "POST",
                 body: JSON.stringify(formData),
